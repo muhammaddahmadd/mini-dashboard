@@ -1,4 +1,5 @@
-import { useState, KeyboardEvent } from 'react';
+import { useState } from 'react';
+import type { KeyboardEvent } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { addTask } from '../../store/slices/tasksSlice';
 import TaskItem from './TaskItem';
