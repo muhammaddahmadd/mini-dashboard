@@ -1,12 +1,10 @@
 import React, { useState } from 'react';
-import { useSelector } from 'react-redux';
 import Header from './Header';
 import NavigationTabs from './NavigationTabs';
 import SalesCard from '../cards/SalesCard';
 import ProfileForm from '../cards/ProfileForm';
 import NotificationsPanel from '../cards/NotificationsPanel';
 import TasksList from '../cards/TasksList';
-import type { RootState } from '../../store/store';
 
 type TabType = 'overview' | 'profile' | 'notifications' | 'tasks';
 
@@ -18,7 +16,7 @@ const Dashboard: React.FC = () => {
       <Header />
       <NavigationTabs activeTab={activeTab} setActiveTab={setActiveTab} />
       
-      <main className="container mx-auto px-4 py-4 sm:py-6 md:py-8">
+      <main className="mx-auto px-4 py-4 sm:py-6 md:py-8 main">
         {activeTab === 'overview' && (
           <div className="grid grid-cols-1 gap-4 sm:gap-6 md:grid-cols-2 lg:grid-cols-4">
             <SalesCard />

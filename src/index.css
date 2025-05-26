@@ -37,3 +37,8 @@
     @apply text-sm sm:text-base;
   }
 }
+
+
+.main {
+  max-width: 200px !important;
+}

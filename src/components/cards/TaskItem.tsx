@@ -21,10 +21,6 @@ const TaskItem: React.FC<TaskItemProps> = ({ task, index, isLast }) => {
     dispatch(toggleTask(task.id));
   };
 
-  const handleRemove = () => {
-    dispatch(removeTask(task.id));
-  };
-
   return (
     <div className="flex items-center space-x-3 p-3 bg-gray-50 rounded-lg group hover:bg-gray-100 transition-colors">
       <input
@@ -39,15 +35,7 @@ const TaskItem: React.FC<TaskItemProps> = ({ task, index, isLast }) => {
       </span>
       
       <div className="flex items-center space-x-2 opacity-0 group-hover:opacity-100 transition-opacity">
-        <button
-          onClick={handleRemove}
-          className="text-red-500 hover:text-red-700 text-sm"
-        >
-          ✕
-        </button>
-        <div className="text-gray-400 cursor-move">
-          ⋮⋮
-        </div>
+        
       </div>
     </div>
   );
