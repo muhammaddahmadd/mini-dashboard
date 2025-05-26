@@ -1,54 +1,54 @@
-# React + TypeScript + Vite
+# Qarar Dashboard
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Setup & Run Instructions
 
-Currently, two official plugins are available:
+1. **Install dependencies:**
+   ```bash
+   npm install
+   # or
+   yarn install
+   ```
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+2. **Start the development server:**
+   ```bash
+   npm run dev
+   # or
+   yarn dev
+   ```
+   The app will be available at `http://localhost:5173` (or the port shown in your terminal).
 
-## Expanding the ESLint configuration
+3. **Build for production:**
+   ```bash
+   npm run build
+   # or
+   yarn build
+   ```
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+4. **Preview production build:**
+   ```bash
+   npm run preview
+   # or
+   yarn preview
+   ```
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+## Brief Overview of Approach
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+- **Tech Stack:** React, TypeScript, Redux Toolkit, Tailwind CSS, Vite.
+- **Design:** Pixel-perfect UI based on provided references, with a focus on responsiveness and accessibility.
+- **State Management:** Redux Toolkit is used for managing authentication, tasks, and notifications.
+- **Styling:** Tailwind CSS for rapid, utility-first, and responsive design. Custom classes and inline styles are used for pixel-perfect details.
+- **Componentization:** The UI is broken down into reusable, type-safe components (e.g., SalesCard, TasksList, TaskItem, ProfileForm).
+- **Type Safety:** TypeScript interfaces and types are used throughout for maintainability and error prevention.
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## Assumptions & Trade-offs
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+- **Assumptions:**
+  - The provided UI references are the source of truth for pixel-perfect implementation.
+  - The app is primarily for desktop and tablet, but is made responsive for mobile as well.
+  - Mock data is used for tasks, sales, and notifications unless otherwise specified.
+  - No backend integration is included; all state is local (Redux store).
+
+- **Trade-offs:**
+  - Some custom UI elements (e.g., checkboxes, drag handles) use inline SVG and custom styles for exactness, which may be less reusable than generic components.
+  - Accessibility is considered, but some ARIA attributes or keyboard navigation may need further enhancement for production.
+  - The focus is on matching the design and code quality, not on advanced features (e.g., real drag-and-drop, persistent storage).
