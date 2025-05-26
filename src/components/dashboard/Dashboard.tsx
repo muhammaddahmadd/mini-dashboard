@@ -26,11 +26,11 @@ const Dashboard: React.FC = () => {
                 This is a pixel-perfect React + Redux dashboard prototype featuring:
               </p>
               <ul className="mt-3 sm:mt-4 space-y-1.5 sm:space-y-2 text-sm text-gray-600">
-                <li>• Authentication with local persistence</li>
-                <li>• Profile management with image upload</li>
-                <li>• Interactive notifications system</li>
-                <li>• Drag-and-drop task management</li>
-                <li>• Responsive design matching provided mockups</li>
+                <li>Authentication with local persistence</li>
+                <li>Profile management with image upload</li>
+                <li>Interactive notifications system</li>
+                <li>Drag-and-drop task management</li>
+                <li>Responsive design matching provided mockups</li>
               </ul>
             </div>
           </div>
