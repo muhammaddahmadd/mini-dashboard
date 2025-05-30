@@ -28,7 +28,7 @@ const AuthForm: React.FC = () => {
       email: formData.email,
       name: `${formData.firstName || 'John'} ${formData.lastName || 'Doe'}`,
     };
-    dispatch(login(userData));
+    dispatch(login(userData));// triggering of auth
   };
 
   const handleInputChange = (e: ChangeEvent<HTMLInputElement>) => {
