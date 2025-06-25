@@ -14,7 +14,7 @@ const SalesCard = () => {
           <svg className="w-6 h-6 mr-1" fill="none" stroke="#22C55E" strokeWidth="3" viewBox="0 0 24 24">
             <polyline points="6 14 12 8 18 14" strokeLinecap="round" strokeLinejoin="round" />
           </svg>
-          12,5%
+          12.5%
         </div>
       </div>
       <div className="mt-4">
